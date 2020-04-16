@@ -1,0 +1,19 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "information about application ",
+  "main": "data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MCB7/ITC-230.git"
+  },
+  "author": "Morgan Bligh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MCB7/ITC-230/issues"
+  },
+  "homepage": "https://github.com/MCB7/ITC-230#readme"
+}
