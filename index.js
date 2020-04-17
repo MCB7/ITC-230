@@ -1,36 +1,23 @@
-const http = require('http');
-var data = require('./data');
+  
 
-const fs = require('fs');
-const hostname = '127.0.0.1'
-const port = 3000;
+var http = require("http");
+const data = require("./data") 
+http.createServer(function(req,res) {
+  console.log(req.url)
+  const url = req.url;
+    if (url === "/") {
+        res.write("home" + "\n\n");
+        res.write(data.getAll());
+        res.end();
+    
+    } else if (url === "/about") {
+        res.writeHead(200, {'Content-Type': 'text/plain'});
+        res.end('my name is Morgan Bligh and I am a student at SCC');
 
-fs.readFile('index.html', (err, html) => {
-    if(err){
-        throw err;
+      
+    } else {
+        res.writeHead(404,{'Content-Type': 'text/plain'});
+        res.end('404 error not found');
+      
     }
-
-
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-type', 'text/plain');
-    res.end('hello');
-    res.write(html);
-    data.people();
-    res.write(javascript);
-    res.end();
-
-    });
-
-    server.listen(port, hostname, () => {
-    console.log('Server started on port' +port);
-    });
-});
-
-
- 
-
-
-
-
-
+}).listen(process.env.PORT || 3000); 
