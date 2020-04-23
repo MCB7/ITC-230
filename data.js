@@ -6,10 +6,11 @@ let people = [
     { name: "Jil", eyecolor: "Brown", haircolor: "Blonde", age: 52 }
     
    ];
-   
+  
+   people= people.length.toString();
    
    exports.getAll = () => {
-       return JSON.stringify(people);
+       return people;
    };
 
 
