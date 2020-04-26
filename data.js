@@ -7,7 +7,7 @@ let people = [
     
    ];
   
-   people= people.length.toString();
+ 
    
    exports.getAll = () => {
        return people;
