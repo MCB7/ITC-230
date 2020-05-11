@@ -7,6 +7,12 @@ let people = [
     
    ];
   
+ exports.getAll = () => {
+     return people;
+ }
+
+
+
  const getItem =  (name) => {
     return people.find((people) => {
          return people.name === name;
