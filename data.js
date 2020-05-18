@@ -19,7 +19,7 @@ let people = [
      });
  }
  const addItem = () => {
-    return people.push({ name: "Jack", eyecolor: "Blue", haircolor: "Black", age: 12 });
+    return people.push({ name: "Jack", eyecolor: "Blue", haircolor: "Black", age: 12 }).toString;
  }
 
  const deleteItem = () => {
